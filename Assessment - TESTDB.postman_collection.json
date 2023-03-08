@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "5238cf14-18b6-4327-9e2a-83585392c3a5",
 		"name": "Assessment - TESTDB",
-		"description": "Include the following security Basic Authorization upon each request:\n\nStartFragment\n\n#### **Authorization: Basic Auth**\n\nEndFragment\n\n**Username**: TESTDB  \n**Password**: Test1234",
+		"description": "Include the following security Basic Authorization upon each request:\n\n#### **Authorization: Basic Auth**\n\n**Username**: TESTDB  \n**Password**: Test1234",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5405199"
 	},
@@ -52,7 +52,7 @@
 								"creates"
 							]
 						},
-						"description": "StartFragment\n\n# **Request Fields**\n\n# **Object Array**\n\n| **Parameter** | **Type** | **Compulsory** | **Description** |\n| --- | --- | --- | --- |\n| lastName | String | Y | Customer Last Name |\n| firstName | String | Y | Customer First Name |\n| address | String |  | Customer address |\n| postcode | String |  | Customer postcode |\n| city | String |  | Customer city |\n| state | String |  | Customer state |\n| country | String |  | Customer country |\n| email | String | Y | Customer personal email |\n| contact | String |  | Customer contact no |\n| joinDate | String |  | Customer join date |\n| card | Object Array |  | Card Info |\n\n# **card**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| no | String | Card No |\n| type | String | Type of card (e.g. M/V stand for Mastercard or Visa) |\n\n# **Response Fields**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| content | Object |  |\n| messages | String\\[\\] |  |\n| status | boolean |  |\n| error | String |  |"
+						"description": "# **Request Fields**\n\n# **Object Array**\n\n| **Parameter** | **Type** | **Compulsory** | **Description** |\n| --- | --- | --- | --- |\n| lastName | String | Y | Customer Last Name |\n| firstName | String | Y | Customer First Name |\n| address | String |  | Customer address |\n| postcode | String |  | Customer postcode |\n| city | String |  | Customer city |\n| state | String |  | Customer state |\n| country | String |  | Customer country |\n| email | String | Y | Customer personal email |\n| contact | String |  | Customer contact no |\n| joinDate | String |  | Customer join date |\n| card | Object Array |  | Card Info |\n\n# **card (Optional)**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| no | String | Card No |\n| type | String | Type of card (e.g. M/V stand for Mastercard or Visa) |\n\n# **Response Fields**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| content | Object |  |\n| messages | String\\[\\] |  |\n| status | boolean |  |\n| error | String |  |\n\n# **content**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cusId | long | Customer ID |\n| cusLastName | String | Customer Last Name |\n| cusFirstName | String | Customer First Name |\n| cusAddress | String | Customer address 1 |\n| cusPostcode | String | Customer postcode |\n| cusCity | String | Customer city |\n| cusState | String | Customer state |\n| cusCountry | String | Customer Country |\n| cusEmail | String |  |\n| cusContact | String |  |\n| cusJoinDate | String |  |\n| name | String | Customer full name |\n| address | String | Customer full address |\n| cards | Object Array |  |\n\n# **cards**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cdId | long |  |\n| cdNo | String |  |\n| cdType | string |  |"
 					},
 					"response": [
 						{
@@ -154,7 +154,8 @@
 								"customers",
 								"create"
 							]
-						}
+						},
+						"description": "# **Request Fields**\n\n# **Object**\n\n| **Parameter** | **Type** | **Compulsory** | **Description** |\n| --- | --- | --- | --- |\n| lastName | String | Y | Customer Last Name |\n| firstName | String | Y | Customer First Name |\n| address | String |  | Customer address |\n| postcode | String |  | Customer postcode |\n| city | String |  | Customer city |\n| state | String |  | Customer state |\n| country | String |  | Customer country |\n| email | String | Y | Customer personal email |\n| contact | String |  | Customer contact no |\n| joinDate | String |  | Customer join date |\n| card | Object Array |  | Card Info |\n\n# **card (Optional)**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| no | String | Card No |\n| type | String | Type of card (e.g. M/V stand for Mastercard or Visa) |\n\n# **Response Fields**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| content | Object |  |\n| messages | String\\[\\] |  |\n| status | boolean |  |\n| error | String |  |\n\n# **content**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cusId | long | Customer ID |\n| cusLastName | String | Customer Last Name |\n| cusFirstName | String | Customer First Name |\n| cusAddress | String | Customer address 1 |\n| cusPostcode | String | Customer postcode |\n| cusCity | String | Customer city |\n| cusState | String | Customer state |\n| cusCountry | String | Customer Country |\n| cusEmail | String |  |\n| cusContact | String |  |\n| cusJoinDate | String |  |\n| name | String | Customer full name |\n| address | String | Customer full address |\n| cards | Object Array |  |\n\n# **cards**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cdId | long |  |\n| cdNo | String |  |\n| cdType | string |  |"
 					},
 					"response": [
 						{
@@ -257,7 +258,8 @@
 								"cardtype",
 								"create"
 							]
-						}
+						},
+						"description": "# **Request Fields**\n\n# **Object Array**\n\nStartFragmentEndFragment\n\n| **Parameter** | **Type** | **Compulsory** | **Description** |\n| --- | --- | --- | --- |\n| ctName | String | Y | Name of the card |\n| ctCode | String | Y | Card code |\n\n# **Response Fields**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| content | Object |  |\n| messages | String\\[\\] |  |\n| status | boolean | result status, true is success, false is failed |\n| error | String | If status is false this will display error message |\n\n# **content (Object Array)**\n\nStartFragment\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| ctId | long | Customer ID |\n| ctName | String | Customer Last Name |"
 					},
 					"response": [
 						{
@@ -375,7 +377,8 @@
 									"value": "15"
 								}
 							]
-						}
+						},
+						"description": "# **Response Fields**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| content | Object Array |  |\n| messages | String\\[\\] |  |\n| status | boolean |  |\n| error | String |  |\n\n# **content (Object Array)**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cusId | long | Customer ID |\n| cusLastName | String | Customer Last Name |\n| cusFirstName | String | Customer First Name |\n| cusAddress | String | Customer address 1 |\n| cusPostcode | String | Customer postcode |\n| cusCity | String | Customer city |\n| cusState | String | Customer state |\n| cusCountry | String | Customer Country |\n| cusEmail | String |  |\n| cusContact | String |  |\n| cusJoinDate | String |  |\n| name | String | Customer full name |\n| address | String | Customer full address |\n| cards | Object Array |  |\n\n# **cards**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cdId | long |  |\n| cdNo | String |  |\n| cdType | string |  |"
 					},
 					"response": [
 						{
@@ -547,7 +550,8 @@
 								"search",
 								"24"
 							]
-						}
+						},
+						"description": "# **Response Fields**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| content | Object Array |  |\n| messages | String\\[\\] |  |\n| status | boolean |  |\n| error | String |  |\n\n# **content (Object Array)**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cusId | long | Customer ID |\n| cusLastName | String | Customer Last Name |\n| cusFirstName | String | Customer First Name |\n| cusAddress | String | Customer address 1 |\n| cusPostcode | String | Customer postcode |\n| cusCity | String | Customer city |\n| cusState | String | Customer state |\n| cusCountry | String | Customer Country |\n| cusEmail | String |  |\n| cusContact | String |  |\n| cusJoinDate | String |  |\n| name | String | Customer full name |\n| address | String | Customer full address |\n| cards | Object Array |  |\n\n# **cards**\n\n| **Parameter** | **Type** | **Description** |\n| --- | --- | --- |\n| cdId | long |  |\n| cdNo | String |  |\n| cdType | string |  |"
 					},
 					"response": [
 						{
